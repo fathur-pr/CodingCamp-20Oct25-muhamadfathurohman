@@ -4,31 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Fathur</title>
+    
     <!-- CSS external file link -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-        <header>
-            <h1>Welcome to My Portfolio</h1>
+        <!--header content-->
+        <header class="main-header p-[8px]">
 
-            <section>
-                <h2>About Me</h2>
-                <p>Hi, I'm Fathur, a passionate web developer.</p>
-            </section>
-
-            <section>
-                <h2>My Projects</h2>
-                <ul>
-                    <li>Project 1</li>
-                    <li>Project 2</li>
-                    <li>Project 3</li>
-                </ul>
-            </section>
+            <!-- Logo Website -->
+            <div class="main-logo"></div>
+            
+            <!-- Navigation Menu -->
+            <nav class="flex gap-1">
+                    <a class="border rounded p-2" href="#home-section">Home</a>
+                    <a class="border rounded p-2" href="#portfolio-section">Our Portfolio</a>
+                    <a class="border rounded p-2" href="#projects-section">Projects</a>
+                    <a class="border rounded p-2" href="#message-section">Message</a>
+            </nav>
+            
         </header>
-       <main></main>
 
+        <!-- Horizontal Line -->
+    <hr />
 
-        <footer></footer>
+        <!--main content-->
+       <main>
+
+        <!--Home-->
+        <section id="home-section" class="hero-section p-4 bg-gray-200 min-h-[500px]">
+            <h1 class="text-3xl font-bold"><span id="greet-name"></span>Welcome to My Portofolio</h1>
+            <p>This is the home section of my portfolio website.</p>
+        </section>
+
+        <hr />
+        <!--Our Portofolio-->
+        <section id="portfolio-section" class="portfolio-section p-4 bg-gray-200 ">
+            <h2 class="text-2xl font-bold">Our Portfolio</h2>
+            <p>This is the portfolio section where I showcase my work.</p>
+        </section>
+
+        <hr />
+        <!--Portofolio-->
+        <section id="projects-section" class="projects-section p-4 bg-gray-200 ">
+            <h2 class="text-2xl font-bold">Projects</h2>
+            <p>This section highlights some of my key projects.</p>
+        </section>
+        <hr />
+        <!--Message-->
+        <section id="message-section" class="message-section p-4 bg-gray-200 ">
+            <h2 class="text-2xl font-bold">Message</h2>
+            <p>If you have any questions or would like to get in touch, feel free to reach out!</p>
+
+            <form>
+                <label for="name" class="block mb-2">Name:</label>
+                <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full" required>
+
+                <label for="email" class="block mb-2">Email:</label>
+                <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full" required>
+
+                <label for="message" class="block mb-2">Message:</label>
+                <textarea id="message-input" name="message" class="border p-2 mb-4 w-full" rows="4" required></textarea>
+                <!--<input type="submit" value="Submit" class="border p-2 bg-blue-500 text-white">-->
+            </form>
+
+            <button onclick="validateForm()" class="bg-blue-500 text-white p-2 rounded"> send message</button>
+        </section>
+
+       </main>
+    
+
+        <footer>
+         <div class="footer-content p-4 bg-gray-800 text-white text-center">
+            <p>&copy; 2025 Fathur's Portfolio. All rights reserved.</p>
+        </footer>
     <!-- Javascript external file link -->
     <script src="js/script.js"></script>
     
